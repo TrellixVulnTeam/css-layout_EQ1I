@@ -4,25 +4,29 @@
   display: grid;
   gap: 10px;
 
-  grid-template:
-    "a a a a" 1fr
-    "b b b c" 2fr
-    "d d d d" 4fr / 2fr 2fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  /* justify-items: center;
+  align-items: center; */
+
+  place-items: center center;
+}
+
+.father > div {
+  width: 50%;
+  height: 50%;
 }
 
 .child1 {
   background-color: red;
-  grid-area: a;
 }
 .child2 {
   background-color: blue;
-  grid-area: b;
 }
 .child3 {
   background-color: cadetblue;
-  grid-area: c;
 }
 .child4 {
   background-color: chartreuse;
-  grid-area: d;
 }
