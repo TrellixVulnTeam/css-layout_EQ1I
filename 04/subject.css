@@ -1,0 +1,73 @@
+.father {
+  width: 735px;
+  height: 415px;
+  color: white;
+
+  display: grid;
+  grid-template:
+    "a b" 1fr
+    "c d" 1fr / 1fr 1fr;
+}
+
+.father .child1 {
+  background-color: #f4f5f7;
+  color: #f44607;
+  grid-area: a;
+  display: grid;
+  place-content: center center;
+}
+.father .child2 {
+  background-color: #008a69;
+  grid-area: b;
+  display: grid;
+  place-content: center center;
+}
+.father .child3 {
+  background-color: #f44607;
+  grid-area: c;
+  display: grid;
+  place-content: center center;
+}
+.father .child4 {
+  grid-area: d;
+  display: grid;
+  grid-template:
+    "A B" 1fr
+    "C D" 1fr / 1fr 1fr;
+}
+
+.father .child4 .grandChild1 {
+  background-color: #f7abc5;
+  color: #f44607;
+  grid-area: A;
+  display: grid;
+  place-content: center center;
+}
+.father .child4 .grandChild2 {
+  background-color: #5f5fa9;
+  grid-area: B;
+  display: grid;
+  place-content: center center;
+}
+.father .child4 .grandChild3 {
+  background-color: #ffc128;
+  color: #f44607;
+  grid-area: C;
+  display: grid;
+  place-content: center center;
+}
+.father .child4 .grandChild4 {
+  background-color: #f97374;
+  grid-area: D;
+  display: grid;
+  place-content: center center;
+}
+
+.father > div {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.father .child4 > div {
+  font-size: 20px;
+}
