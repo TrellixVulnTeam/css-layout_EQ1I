@@ -4,5 +4,6 @@
         "configurations": [],
         "compounds": []
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": null
 }
