@@ -1,0 +1,20 @@
+body,
+.father {
+  height: 600px;
+}
+
+.father:first-child {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  color: white;
+}
+
+.father .child:nth-child(odd) {
+  background-color: red;
+}
+
+.father .child:nth-child(even) {
+  background-color: blue;
+}
