@@ -1,0 +1,76 @@
+@import "_variables";
+@import "./mixins";
+@import "./buttons";
+
+h2 {
+  @include title(red);
+}
+
+.box > button {
+  background-color: $bg;
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+}
+
+button {
+  display: block;
+}
+
+body > a {
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+    @include link("odd");
+  }
+  &:nth-child(even) {
+    @include link("even");
+  }
+}
+
+.container {
+  .box1 {
+    background-color: red;
+  }
+  .box2 {
+    background-color: blue;
+  }
+  .box3 {
+    background-color: yellow;
+  }
+  .box4 {
+    background-color: green;
+  }
+}
+
+.extends > a,
+.extends > button {
+  @extend %button;
+}
+.extends > button {
+  margin-top: 20px;
+}
+
+body > div > a,
+body > div > button {
+  @include btn();
+  text-decoration: none;
+}
+
+body > div > a {
+  text-decoration: none;
+}
+
+body > div > button {
+  border: none;
+}
+
+.content {
+  // @include content(yellow) {
+  //   background-color: yellow;
+  //   color: red;
+  // }
+  @include content(red) {
+    background-color: red;
+    color: yellow;
+  }
+}

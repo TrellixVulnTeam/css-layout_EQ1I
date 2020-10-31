@@ -1,0 +1,73 @@
+.extends > a,
+.extends > button {
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px;
+  color: white;
+  background-color: peru;
+  text-decoration: none;
+  border: none;
+  outline: none; }
+
+h2 {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 12px; }
+
+.box > button {
+  background-color: #e7473c;
+  margin-bottom: 10px;
+  color: white;
+  border: none; }
+
+button {
+  display: block; }
+
+body > a {
+  margin-bottom: 10px; }
+  body > a:nth-child(odd) {
+    text-decoration: none;
+    display: block;
+    color: blue; }
+  body > a:nth-child(even) {
+    text-decoration: none;
+    display: block;
+    color: red; }
+
+.container .box1 {
+  background-color: red; }
+
+.container .box2 {
+  background-color: blue; }
+
+.container .box3 {
+  background-color: yellow; }
+
+.container .box4 {
+  background-color: green; }
+
+.extends > button {
+  margin-top: 20px; }
+
+body > div > a,
+body > div > button {
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  color: white;
+  background-color: peru;
+  text-decoration: none; }
+
+body > div > a {
+  text-decoration: none; }
+
+body > div > button {
+  border: none; }
+
+.content {
+  font-weight: bold;
+  font-size: 30px;
+  background-color: red;
+  color: yellow; }
