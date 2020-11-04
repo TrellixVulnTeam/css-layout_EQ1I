@@ -1,0 +1,184 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 740px;
+  height: 460px;
+  background-color: #ebeb52;
+  padding: 8px;
+  position: relative;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 20px;
+    grid-template-rows: 20px 1fr 20px;
+
+    .child1 {
+      border: 2px solid peru;
+      height: 100%;
+      background-color: white;
+      grid-column: 1/-1;
+
+      .text {
+        color: peru;
+        font-weight: bold;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+    .child2 {
+      grid-column: 1/2;
+      grid-row: 2/-2;
+      display: grid;
+      grid-template-rows: 50% 40% 10%;
+      border: 2px solid peru;
+
+      .grand-child1 {
+        background-color: peru;
+        display: flex;
+        justify-content: center;
+        .text {
+          color: white;
+          text-orientation: upright;
+          font-size: 10px;
+          letter-spacing: -6px;
+          text-transform: uppercase;
+          writing-mode: vertical-rl;
+        }
+      }
+      .grand-child2 {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        color: peru;
+
+        .text {
+          transform: rotate(180deg);
+          width: 100%;
+          writing-mode: vertical-rl;
+          line-height: 14px;
+          text-transform: uppercase;
+          font-size: 10px;
+          letter-spacing: 2px;
+        }
+      }
+      .grand-child3 {
+        background-color: white;
+        border-top: 2px solid peru;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: peru;
+      }
+    }
+    .child3 {
+      background-image: url("../image/mina.jpg");
+      background-size: 100% 100%;
+      background-position: center;
+    }
+    .child4 {
+      background-image: url("../image/sana.jpg");
+      background-size: 100% 100%;
+      background-position: center;
+    }
+    .child5 {
+      display: grid;
+      grid-template-rows: 50% 50%;
+      border: 2px solid peru;
+
+      .grand-child1 {
+        background-color: green;
+        text-align: center;
+        display: flex;
+
+        .text {
+          color: white;
+          text-orientation: upright;
+          font-size: 10px;
+          letter-spacing: 0px;
+          text-transform: uppercase;
+          writing-mode: vertical-rl;
+        }
+      }
+      .grand-child2 {
+        border-top: 2px solid peru;
+        background-color: green;
+        text-align: center;
+        display: flex;
+
+        .text {
+          color: white;
+          text-orientation: upright;
+          font-size: 10px;
+          letter-spacing: -3px;
+          text-transform: uppercase;
+          writing-mode: vertical-rl;
+        }
+      }
+    }
+    .child6 {
+      border: 2px solid peru;
+      background-color: white;
+      grid-column: 1/-1;
+
+      .text {
+        color: peru;
+        font-weight: bold;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .message__icon {
+    padding: 7px 10px;
+    background-color: peru;
+    border-radius: 7px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 22px;
+    font-size: 14px;
+  }
+}
