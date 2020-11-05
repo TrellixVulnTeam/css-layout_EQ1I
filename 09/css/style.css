@@ -1,0 +1,103 @@
+.page {
+  width: 740px;
+  height: 460px;
+}
+
+.page {
+  overflow: hidden;
+}
+.page .title {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 26px;
+  font-size: 12px;
+}
+.page .title > div {
+  border: 2px solid black;
+  padding: 3px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.page .title .child1,
+.page .title .child3,
+.page .title .child5 {
+  border-left: none;
+  border-right: none;
+}
+.page .content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  font-size: 12px;
+}
+.page .content .child2,
+.page .content .child5,
+.page .content .child8 {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.page .content .child4,
+.page .content .child5,
+.page .content .child6 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.page .content .child1 > div {
+  background-image: url("https://i.stack.imgur.com/Owii4.png");
+}
+.page .content .child2 > div {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA4MzBfMTA3%2FMDAxNTY3MTIzNTM0NDM4.i2JAfe3biI2lYgT9qLS51lRAJDdXmzce15AnBQbTJ1og.viYCueQep6_2btQCpDHQeIrrzCQ-T27KWrHMFzF6Wpog.PNG.ptj0969%2F%25C4%25B8%25C3%25B3_2019_08_30_09_01_08_95.png&type=sc960_832");
+}
+.page .content .child3 > div {
+  background-image: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA19540_hires.jpg");
+}
+.page .content .child4 > div {
+  background-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.stack.imgur.com%2FExbq0.png&type=b400");
+}
+.page .content .child5 > div {
+  background-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.stack.imgur.com%2F1rNQa.png&type=b400");
+}
+.page .content .child6 > div {
+  background-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.stack.imgur.com%2FIMjwg.png&type=b400");
+}
+.page .content .child7 > div {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20091005_119%2Fgokim602_12546741342568Bjmk_jpg%2F0005_vanchan78_gokim602.jpg&type=sc960_832");
+}
+.page .content .child8 > div {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20090906_89%2Fk0j2g3_1252204080896Ef3pO_jpg%2F14_k0j2g3.jpg&type=sc960_832");
+}
+.page .content .child9 > div {
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140618_51%2Fdapeong_1403083889228uA5DF_JPEG%2FNaverBlog_20140618_173129_02.jpg&type=sc960_832");
+}
+.page .content > div {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.page .content > div > div {
+  width: 165px;
+  height: 90px;
+  background-size: cover;
+  background-position: center center;
+}
+.page .content > div > span {
+  position: absolute;
+}
+.page .content > div > span:first-child {
+  top: 10px;
+  left: 10px;
+}
+.page .content > div > span:nth-child(2) {
+  top: 10px;
+  right: 10px;
+}
+.page .content > div > span:nth-child(3) {
+  bottom: 10px;
+  left: 10px;
+}
+.page .content > div > span:nth-child(4) {
+  bottom: 10px;
+  right: 10px;
+}
