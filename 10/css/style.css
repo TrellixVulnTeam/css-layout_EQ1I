@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  width: 735px;
+  height: 375px;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 0.7fr;
+}
+.page .col:first-child {
+  background-color: orange;
+  padding: 5px;
+}
+.page .col:first-child .grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0.1fr 1fr 0.6fr;
+  grid-template-rows: repeat(6, 1fr);
+  border-left: 1px solid red;
+  border-top: 1px solid red;
+  color: red;
+}
+.page .col:first-child .grid .child {
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+}
+.page .col:first-child .grid .child:nth-child(1),
+.page .col:first-child .grid .child:nth-child(2),
+.page .col:first-child .grid .child:nth-child(3) {
+  border-bottom: 1px solid white;
+}
+.page .col:first-child .grid .child:nth-child(4),
+.page .col:first-child .grid .child:nth-child(5),
+.page .col:first-child .grid .child:nth-child(6) {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.page .col:first-child .grid .child:nth-child(4) {
+  border-left: 1px solid white;
+}
+.page .col:first-child .grid .child:nth-child(3n) {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  font-size: 10px;
+}
+.page .col:first-child .grid .child:nth-child(3n) .grandChild:first-child {
+  border-bottom: 1px solid red;
+}
+.page .col:first-child .grid .child:nth-child(3n) .grandChild {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.page
+  .col:first-child
+  .grid
+  .child:nth-child(3n)
+  .grandChild:last-child
+  > span {
+  background-color: red;
+  padding: 3px 5px;
+  color: orange;
+  border-radius: 20px;
+  display: inline-block;
+  width: 80%;
+}
+.page .col:first-child .grid .child:nth-child(3n + 1) {
+  font-size: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.page .col:first-child .grid .child:nth-child(3n + 1) > span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.page .col:first-child .grid .child:nth-child(3n + 2) {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.page .col:first-child .grid .child:nth-child(6) .grandChild:last-child {
+  border-top: 1px solid white;
+  color: orange;
+}
+.page .col:first-child .grid .child:nth-child(6) .grandChild:last-child > span {
+  background-color: white;
+  padding: 3px 5px;
+}
+.page .col:nth-child(2) {
+  background-color: yellow;
+  position: relative;
+}
+.page .col:nth-child(2) .grid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr 1fr;
+}
+.page .col:nth-child(2) .grid .child:first-child {
+  background-color: hotpink;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.page .col:nth-child(2) .grid .child:first-child > span {
+  writing-mode: vertical-rl;
+}
+.page .col:nth-child(2) .grid .child:last-child {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.page .col:nth-child(2) .grid .child:last-child > span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.page .col:nth-child(2) .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .col:nth-child(2) .icon > i {
+  font-size: 40px;
+}
+.page .col:last-child {
+  background-color: red;
+}
+.page .col:last-child .header {
+  padding: 5px;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.page .col:last-child .grid {
+  display: grid;
+  height: 90%;
+  grid-template: repeat(2, 1fr) auto/repeat(2, 1fr);
+}
+.page .col:last-child .grid .child {
+  margin: 5px;
+  border-top: 1px solid black;
+}
+.page .col:last-child .grid .child .title {
+  font-weight: 600;
+}
+.page .col:last-child .grid .child .content {
+  font-size: 10px;
+  display: flex;
+}
